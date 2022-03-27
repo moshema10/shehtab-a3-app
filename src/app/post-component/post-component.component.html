@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <!-- Latest Posts -->
+    <main class="post blog-post col-lg-8">
+      <div class="container">
+        <app-post-data-component [post]="blogPosts[0]"></app-post-data-component>
+      </div>
+    </main>
+
+    <aside class="col-lg-4">
+
+      <app-search-widget-component></app-search-widget-component>
+      <app-latest-posts-component [posts]="blogPosts.slice(0,3)"></app-latest-posts-component>
+      <app-categories-component></app-categories-component>
+      <app-tags-component></app-tags-component>
+
+    </aside>
+  </div>
+</div>
