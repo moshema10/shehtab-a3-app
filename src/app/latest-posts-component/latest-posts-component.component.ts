@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { BlogPost } from '../BlogPost';
+import { PostServiceService } from '../post-service.service';
 
 @Component({
   selector: 'app-latest-posts-component',
@@ -8,11 +9,19 @@ import { BlogPost } from '../BlogPost';
 })
 export class LatestPostsComponentComponent implements OnInit {
   
-  @Input() public posts: Array<BlogPost>;
+  public posts: Array<BlogPost>;
+  public postSub: any;
 
-  constructor() { }
+  constructor(private data: PostServiceService) { }
 
   ngOnInit(): void {
+    this.postSub = this.data.getPost(1,null,null).subscribe(datas=>{
+      this.posts = datas.slice(0,3);
+    })
+  }
+
+  ngOnDestroy() : void{
+    this.postSub.unsubscribe();
   }
 
 }

@@ -1,6 +1,4 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { BlogPost } from '../BlogPost';
-import BlogData from '../../app/blogData.json';
 
 @Component({
   selector: 'app-footer-component',
@@ -9,7 +7,7 @@ import BlogData from '../../app/blogData.json';
 })
 export class FooterComponentComponent implements OnInit {
 
-  @Input() public Topposts: Array<BlogPost> = BlogData.slice(0,3);
+  
 
   constructor() { }
 

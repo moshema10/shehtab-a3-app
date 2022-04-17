@@ -9,10 +9,13 @@ import { BlogPost } from '../BlogPost';
 export class PostCardComponentComponent implements OnInit {
 
   @Input() public post: BlogPost;
-  @Input() public class: string = "col-xl-6";
-  constructor() { }
+  public class: string = "col-xl-6";
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
+    
   }
 
 }
