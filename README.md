@@ -1,4 +1,7 @@
-# ShehtabA3App
+# A Blogging Website
+
+## Deployed Link
+https://amazing-tarsier-9bd127.netlify.app/home
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
